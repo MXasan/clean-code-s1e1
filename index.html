@@ -1,19 +1,122 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
 <body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
+    <div class="someDiv">ok</div>
+
+
+
+    <script>
+
+
+
+
+        const someDiv = document.querySelector('.someDiv');
+        someDiv.innerHTML += 'hi'
+
+        let a = true;
+        let b = true;
+        console.log(
+            Math.min(10, 222, -5, 0, '-33')
+        )
+
+        /* console.log(Math.abs(Math.floor(-46.867)))*/
+
+
+        // for (let i = 10; i < 10; i++) {
+        //     console.log(i)
+        // }
+        // console.log(name)
+
+        let i = 0;
+        let c = 0;
+        const str = 'Rolling Scopes Srchool';
+        while (i < str.length) { if (str[i] == 'r') { c++; } i++; } console.log(c), console.log(i);
+
+        // let t = undefined
+        // if(t){
+        //     console.log(1)
+        // }else{
+        //     console.log(2)
+        // }
+    </script>
 </body>
+
+<p>ok</p>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+
+<body>
+    <div class="aaa">
+        <img src="./eisenhower-matrix.jpg" alt="headerImg">
+        <a class="more_inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a>
+    </div>
+    <div class="centered-main-page-element">
+        <div class="addNewTask">
+            <label for="new-task">Add Item</label>
+            <div class="task-row-wrapper">
+                <input id="new-task" class="task" type="text">
+                <button>Add</button>
+            </div>
+        </div>
+        <div class="todoList">
+            <h3>Todo</h3>
+            <ul id="incompleteTasks">
+                <li>
+                    <input id="input" type="checkbox"><label class="task" for="input">Pay Bills</label>
+                    <input id="input" type="text" class="task">
+                    <button class="edit">Edit</button>
+                    <button class="delete">
+                        <img src="./remove.svg" alt="imgDelete">.
+                    </button>
+                </li>
+                <li class="editMode">
+                    <input id="inputEdit" type="checkbox"><label class="task" for="inputEdit">Go Shopping</label>
+                    <input id="inputEdit" type="text" value="Go Shopping" class="task">
+                    <button class="edit">Save</button>
+                    <button class="delete">
+                        <img src="./remove.svg" alt="deletImg">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="completedList">
+            <h3>Completed</h3>
+            <ul id="completed-tasks">
+                <li>
+                    <input id="inputDone" type="checkbox" checked><label for="inputDone" class="task">See the
+                        Doctor</label>
+                    <input id="inputDone" type="text" class="task">
+                    <button class="edit">edit</button>
+                    <button class="delete">
+                        <img src="./remove.svg" alt="imgDelete">.
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
