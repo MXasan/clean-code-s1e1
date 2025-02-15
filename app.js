@@ -33,7 +33,7 @@ const createNewTaskElement = function (taskString) {
         deleteButtonImg = document.createElement("img");//delete button image
 
     label.innerText = taskString;
-    label.className = 'task';
+    label.className = "task";
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
@@ -44,7 +44,7 @@ const createNewTaskElement = function (taskString) {
     editButton.className = "edit";
 
     deleteButton.className = "delete";
-    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.src = "./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -60,11 +60,9 @@ const createNewTaskElement = function (taskString) {
 
 
 const addTask = function () {
-    console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     const listItem = createNewTaskElement(taskInput.value);
-    console.log(taskInput.value)
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
@@ -76,13 +74,10 @@ const addTask = function () {
 //Edit an existing task.
 
 const editTask = function () {
-    console.log("Edit Task...");
-    console.log("Change 'edit' to 'save'");
-
 
     let listItem = this.parentNode;
 
-    const editInput = listItem.querySelector('input[type=text]'),
+    const editInput = listItem.querySelector("input[type=text]"),
         label = listItem.querySelector("label"),
         editBtn = listItem.querySelector(".edit"),
         containsClass = listItem.classList.contains("editMode");
@@ -105,7 +100,6 @@ const editTask = function () {
 
 //Delete task.
 const deleteTask = function () {
-    console.log("Delete Task...");
 
     let listItem = this.parentNode,
         ul = listItem.parentNode;
@@ -117,7 +111,6 @@ const deleteTask = function () {
 
 //Mark task completed
 const taskCompleted = function () {
-    console.log("Complete Task...");
 
     //Append the task list item to the #completed-tasks
     let listItem = this.parentNode;
@@ -128,7 +121,6 @@ const taskCompleted = function () {
 
 
 const taskIncomplete = function () {
-    console.log("Incomplete Task...");
     //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
@@ -152,7 +144,6 @@ addButton.addEventListener("click", ajaxRequest);
 
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-    console.log("bind list item events");
     //select ListItems children
     const checkBox = taskListItem.querySelector("input[type=checkbox]"),
         editButton = taskListItem.querySelector("button.edit"),
