@@ -149,7 +149,7 @@ const ajaxRequest = function () {
 
 
 //Set the click handler to the addTask function.
-addButton.onclick = addTask;
+addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
 
@@ -164,9 +164,9 @@ const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
 
 
     //Bind editTask to edit button.
-    editButton.onclick = editTask;
+    editButton.addEventListener("click", editTask);
     //Bind deleteTask to delete button.
-    deleteButton.onclick = deleteTask;
+    deleteButton.addEventListener("click", deleteTask);
     //Bind taskCompleted to checkBoxEventHandler.
     checkBox.onchange = checkBoxEventHandler;
 }
@@ -174,7 +174,6 @@ const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
 //cycle over incompleteTaskHolder ul list items
 //for each list item
 for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
-
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
